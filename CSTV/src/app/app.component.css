@@ -1,22 +1,25 @@
-.hlogo{
+.hlogo{ /*wlaściwośći dla górnej części headera*/
 	background: #42a5f5;
 	width: 100%;
 	display: flex;
     justify-content: center;
     box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
 }
-.flogo{
+
+.flogo{/*lokalizacja rysunku logo*/
 	background: #42a5f5;
 	width: 100%;
 	display: flex;
     justify-content: center;
 }
-.hImg{
+
+.hImg{ /*wlaćsiwośći logo*/
 	width : 240px;
 	padding: 5px;
 	max-width: 100%;
 	box-sizing: border-box;
 }
+
 .fImg{
     width : 240px;
 	padding: 5px;
@@ -24,15 +27,18 @@
 	box-sizing: border-box;
 }
 
-header{
+.links{ /* dolna częćś headera, wlaściwości linków*/
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 1.9px;
 	background-color: #f5f5f5;
+	box-shadow: 0px 1.7px 2px 0px rgba(50,50,50,.4);
+	overflow: auto;
 }
 
 nav.hdr{
-	background-color: #f5f5f5;
 	text-align: center;
 	margin: 0 auto;
-	width: 800px;
 	height: 50px;
 }
 
@@ -45,7 +51,6 @@ nav.hdr{
 
 .topnav a{
 	color: #424242;
-	/* text-align: center; */
 	padding: 14px 20px;
 	font-size: 15px;
 }
@@ -54,17 +59,16 @@ nav.hdr{
 	border-bottom: 2px solid #000000;
 }
 
-footer{
+footer{ /*kolor, rozmiary oraz lokalizacja footera*/
 	width: 100%;
 	height: 200px;
 	background: #42a5f5;
 	margin: 0 auto;
 	text-align: center;
     padding-top: 25px;
-    box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
 }
 
-footer a{
+footer a{ /*wlaściwości linków*/
 	color: white;
 	font-size: 14px;
 	margin-left: 10px;
@@ -86,9 +90,15 @@ footer nav a:hover{
 	border-bottom: 1px solid #fff;
 }
 
-.icons img{
+.icons img{ /*rozmiary ikonek w donej części footera*/
 	margin-top: 10px;
 	margin-right: 10px;
 	width: 20px;
 }
 
+.main-content{
+	max-width: 1000px;
+	background-color: #f5f5f5;
+	margin: 0 auto;
+	box-shadow: 0px 1.7px 2px 0px rgba(50,50,50,.4);
+}

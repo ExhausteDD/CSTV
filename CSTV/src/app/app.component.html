@@ -1,38 +1,40 @@
-<header>
-  <div class="hlogo">
+<header><!--header aplikacji-->
+  <div class="hlogo"> <!--(poniżej i daej wszedzie)dyrektywa routerLink jest dla nawigacji po stronie -->
     <a routerLink="main"><img class="hImg" src="assets/appComponent/header/fakepath_logo_black.png" alt="Logo"></a>
   </div>
-  <nav class="hdr">
-    <div class="topnav">
-      <a routerLink="/main">GŁÓWNA</a>
-      <a routerLink="/events">TURNIEJE</a>
-      <a routerLink="/news">NOWINY</a>
-      <a routerLink="/top-players">TOP GRACZY</a>
-      <a routerLink="/top-teams">TOP DRUŻYN</a>
-      <a routerLink="/about">O STRONIE</a>
-    </div>
-  </nav>
-</header>
-<main>
-  <div class="main-content">
-  <router-outlet></router-outlet>
-  </div>
-</main>
-<footer>
-    <nav class="ftr">
+  <div class="links">
+    <nav class="hdr">
+      <div class="topnav"><!--blok zawirający listę linków do przekierowywań po stronach aplikacji-->
         <a routerLink="/main">GŁÓWNA</a>
         <a routerLink="/events">TURNIEJE</a>
         <a routerLink="/news">NOWINY</a>
         <a routerLink="/top-players">TOP GRACZY</a>
         <a routerLink="/top-teams">TOP DRUŻYN</a>
         <a routerLink="/about">O STRONIE</a>
+      </div>
     </nav>
-    <div class="flogo">
-      <a routerLink ="/main"><img class="fImg" src="assets/appComponent/header/fakepath_logo_black.png" alt="Logo"></a>
-    </div>
-    <div class="icons">
-      <a><img src="assets/appComponent/footer/phone_black.png">+48574471516</a>
-      <a><img src="assets/appComponent/footer/email_black.png">w58925@student.wsiz.rzeszow.pl</a>
-      <a><img src="assets/appComponent/footer/copyright_black.png">WSIiZ 2019</a>
-    </div>
-  </footer>
+  </div>
+</header>
+<main>
+  <div class="main-content"><!--block z klasem dla możliwoćsi nadania za pomocą CSS wlaściwosci dla niego-->
+    <router-outlet></router-outlet><!--spacjalizowany tag od Angular który zawiera w sobie kontent każdej strony aplikacji-->
+  </div>                           
+</main>
+<footer> <!--footer aplikacji-->
+  <nav class="ftr">
+    <a routerLink="/main">GŁÓWNA</a>
+    <a routerLink="/events">TURNIEJE</a>
+    <a routerLink="/news">NOWINY</a>
+    <a routerLink="/top-players">TOP GRACZY</a>
+    <a routerLink="/top-teams">TOP DRUŻYN</a>
+    <a routerLink="/about">O STRONIE</a>
+  </nav>
+  <div class="flogo">
+    <a routerLink="/main"><img class="fImg" src="assets/appComponent/header/fakepath_logo_black.png" alt="Logo"></a>
+  </div>
+  <div class="icons">
+    <a><img src="assets/appComponent/footer/phone_black.png">+48574471516</a>
+    <a><img src="assets/appComponent/footer/email_black.png">w58925@student.wsiz.rzeszow.pl</a>
+    <a><img src="assets/appComponent/footer/copyright_black.png">WSIiZ 2019</a>
+  </div>
+</footer>

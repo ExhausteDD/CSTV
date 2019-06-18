@@ -7,7 +7,7 @@ import { TopPlayersComponent } from './top-players/top-players.component';
 import { TopTeamsComponent } from './top-teams/top-teams.component';
 import { AboutComponent } from './about/about.component';
 
-const routes: Routes = [
+const routes: Routes = [ // array z opisaniem dla przekierowywania na każdą strone aplikacji
   {path: '', pathMatch: 'full', redirectTo: 'main'},
   {path: 'main', component: MainComponent},
   {path: 'events', component: EventsComponent},

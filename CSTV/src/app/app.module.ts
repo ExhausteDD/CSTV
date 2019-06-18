@@ -12,7 +12,7 @@ import { TopTeamsComponent } from './top-teams/top-teams.component';
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ // podłączenie każdego komponentu aplikacji do modulu głównego
     AppComponent,
     MainComponent,
     TopPlayersComponent,
@@ -21,7 +21,7 @@ import { AboutComponent } from './about/about.component';
     TopTeamsComponent,
     AboutComponent
   ],
-  imports: [
+  imports: [ // module dla szybciej oraz prawidłowej roboty aplikacji
     BrowserModule,
     AppRoutingModule,
     FormsModule

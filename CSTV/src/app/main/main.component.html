@@ -1,3 +1,136 @@
-<p>
-  main works!
-</p>
+<div class="all"> <!--  początek slajderza -->
+  <input checked type="radio" name="respond" id="desktop">
+  <article id="slider"> <!--(tu i dalej) użyto id dla łatwiejszej konfigaracji tego jako slajder-->
+    <input checked type="radio" name="slider" id="switch1">
+    <input type="radio" name="slider" id="switch2">
+    <input type="radio" name="slider" id="switch3">
+    <input type="radio" name="slider" id="switch4">
+    <div id="slides">
+      <div id="overflow">
+        <div class="image"> <!--rysunki wraz z tekstem-->
+          <a routerLink="/events"><!--(tu i daej wszedzie)dyrektywa routerLink jest dla nawigacji po stronie -->
+            <article>
+              <div>TURNIEJE</div><img src="assets/main/sl1.jpg">
+            </article>
+          </a>
+          <a routerLink="/news">
+            <article>
+              <div>NOWINY</div><img src="assets/main/sl2.jpg">
+            </article>
+          </a>
+          <a routerLink="/top-players">
+            <article>
+              <div>TOP GRACZY</div><img src="assets/main/sl3.jpg">
+            </article>
+          </a>
+          <a routerLink="/top-teams">
+            <article>
+              <div>TOP DRUŻYN</div><img src="assets/main/sl4.jpg">
+            </article>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="active"> <!--przełaczniki dla zdjęć(chekboxy)-->
+      <label for="switch1"></label>
+      <label for="switch2"></label>
+      <label for="switch3"></label>
+      <label for="switch4"></label>
+    </div>
+  </article>
+</div>
+<!--Główny kontent głównej strony-->
+<section class="sections-one"> <!--pierwsza sekcja z kartkami-->
+  <div class="section-container">
+    <h3>Nowiny</h3>
+    <div class="sections-cards">
+      <a routerLink="/events"> 
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/news/newscard1.jpg">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">Officjalnie: BoomBl4<br>dołączył do Na`Vi</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/events">
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/news/newscard2.jpg">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">CIS ESPORTS turniej<br>juz anonosowany</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/events">
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/news/newscard3.jpg">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">Liquid zakończyli ESL<br>ONE COLOGNE 2019</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/events">
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/news/newscard4.jpg">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">RENEGADES dołaczyli do<br>listy uczęstników BLAST</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="sections-two"> <!--druga sekcja z kartkami, zawiera te same właściwości z .CSS co i pierwsza-->
+  <div class="section-container">
+    <h3>Turnieje</h3>
+    <div class="sections-cards">
+      <a routerLink="/events">
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/events/eventESL9.png">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">ESL Pro League<br>Season 9 2019</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/events">
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/events/eventDH2019.png">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">DreamHack Open<br>Summer 2019</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/events">
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/events/eventBLASTMadrid.png">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">BLAST Pro Series<br>Madrid 2019</p>
+          </div>
+        </div>
+      </a>
+      <a routerLink="/events">
+        <div class="card">
+          <div class="top-card">
+            <img src="assets/events/eventIEM2019.png">
+          </div>
+          <div class="bottom-card">
+            <p class="first-p">Intel Extreme Masters<br>Katowice 2019</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

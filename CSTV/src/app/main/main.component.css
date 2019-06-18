@@ -1,0 +1,146 @@
+#slider { /*lokalizacja slajdera*/
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider{ /*jego centrowanie*/
+	margin: 0 auto;
+}
+
+#slides article{ /*każdy rysunek obók siebie*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*rozmiar bloku odpowiada rozmiaram rysunków*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*chowa wszystko co znajduję się za przestrzenią bloku*/
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0 2px 2px 0 rgba(50,50,50,.4);
+}
+
+article img{ /*rozmiar rysunków slajdera*/
+	width: 960px;
+	height: 400px;
+	object-fit: cover;
+}
+.image div{ /*wlaściwości tekstu w slajderze*/
+	position: relative;
+	top: 200px;
+	right: 400px;
+	color: white;
+	font-size: 23px;
+	font-weight: 500;
+}
+
+#desktop:checked ~ #slider{ /*rozmiar całego slajderza*/
+	max-width: 960px; /*maks rozmiar*/
+}
+
+.all input{ /*chowa standartowe checkboxy na stronie*/
+	display: none;
+}
+
+/*lokalizacja zdjęć po kliknięciu na slajderz*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#active label{ /*wlasćiwości przełaczników zdjęć na slajderze*/
+	border-radius: 10px; 
+	display: inline-block; 
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+	background: #90caf9;
+}
+
+#active{ /*bloczek z przełącznikami*/
+	margin-top: 15px;
+}
+
+#active label:hover{ 
+	background: #64b5f6;
+}
+
+/*kolor aktywnego checkboxa*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4){
+	background: #42a5f5;
+}
+
+#slides .image{ /*szybkość animacji przełaczenia rysunków na slajderze*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+.section-container{ /*wlasciwości dla kontainera z kontentem*/
+	text-align: center;
+	padding-bottom: 20px;
+	box-shadow: 0 1px 2px 0 rgba(50,50,50,.4); /*cień wokół kontenerza */
+}
+
+.section-container h3{ /*wlaściwości dla zagłówka w kontenerze*/
+	color: #37474f;
+	font-size: 30px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.sections-one{
+	width: 950px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.sections-two{
+	width: 950px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.first-p{ /*color oraz size tekstu w bloczkach*/
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.card{ 
+	height: 243px;
+	box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
+}
+
+.bottom-card{
+	background: #42a5f5;
+	position: relative;
+	top: -15px;
+}
+
+.sections-cards{ /*lokalizacja dla karteczek z kontentem*/
+	display: flex;
+	justify-content: space-between;
+	margin: 0 15px;
+}
+
+.top-card img{ /*wslaściwość rysunków*/
+	object-fit: cover;
+	width: 215px;
+	height: 195px;
+}
