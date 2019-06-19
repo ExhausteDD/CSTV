@@ -1,3 +1,33 @@
-<p>
-  news works!
-</p>
+<section class="spawned">
+  <div class="spawnedInfo" *ngIf="selectedNews"> <!--(tu i dalej)dyrektywa *ngIf pozwala na generowanie potrzebnego elementu według wybranego z listy istniejących-->
+      <h2>{{selectedNews.name | uppercase}}</h2> <!--wybieramy nazwe nowosci z wybranego elementu isty-->
+      <hr>
+      <div class="spawnedText1">
+        {{selectedNews.description1}}
+      </div>
+      <hr>
+  </div>
+  <div class="spawnedPhoto" *ngIf="selectedNews">
+      <img src="{{selectedNews.photoOfNews}}" />
+  </div>
+  <div class="spawnedInfo" *ngIf="selectedNews">
+    <hr>
+    <div class="spawnedText2">
+        {{selectedNews.description2}}
+    </div>
+    <hr>
+  </div>
+</section>
+
+<section class="all">
+  <h2>NOWINY</h2>
+  <div class="eventElements">
+      <ul class="events">
+          <li *ngFor="let news of newss" [class.selected]="news === selectedNews" 
+              (click)="onSelect(news)"> <!--dyrektywa *ngFor tworzy liste lementów z istniejącego array elementów nowin-->
+              <span class="badge">{{news.name | uppercase}}</span>
+          </li>
+      </ul>
+  </div>
+</section>
+
