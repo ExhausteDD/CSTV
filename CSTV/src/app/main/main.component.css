@@ -70,6 +70,7 @@ article img{ /*rozmiar rysunków slajdera*/
 	height: 15px;
 	margin: 2px;
 	background: #90caf9;
+	cursor: pointer;
 }
 
 #active{ /*bloczek z przełącznikami*/

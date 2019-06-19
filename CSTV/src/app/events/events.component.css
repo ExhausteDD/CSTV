@@ -1,0 +1,74 @@
+.selected { /*efekt dla aktywnego eementu listy*/
+  background-color: #90caf9 !important;
+}
+.events { /*wlaściwości bloku listy*/
+  margin: auto;
+  list-style-type: none;
+  padding: 0;
+  width: 50em;
+  text-align: center;
+}
+.events li { /*wlaściwości elementów listy*/
+  cursor: pointer;
+  position: relative;
+  background-color: #42a5f5;
+  margin: 3px;
+  padding: .3em 0;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
+}
+.events .text {
+  position: relative;
+  top: -3px;
+}
+.events .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  position: relative;
+  height: 1.8em;
+  border-radius: 4px;
+}
+.all h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #424242;
+  font-weight: 600;
+}
+.all{ /*lokalizacja sekcji która zawiera w sobie inne bloki z listą elementów*/
+  padding-bottom: 35px;
+}
+.spawned{ /*lokalizacja sekcji która zawiera w sobie wypływającą informacje o wybranym turnieju*/
+  padding-bottom: 25px;
+}
+.spawned h2{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 180px;
+  color: #424242;
+  font-weight: 600;
+}
+.spawnedInfo{ /*rozmiar oraz lokaizacja bloku z nazwą turnieju*/
+  width: 600px;
+  float: right;
+  margin-right: 100px;
+}
+.spawnedText{ /*wlaściwosći bloku z informacją o turnieju*/
+  padding: 10px 0px 13px 0px;
+  text-align: justify;
+}
+.spawnedInfo span{
+  font-weight: bold;
+}
+.spawnedPhoto{ /* lokalizacja bloku ze zdjęciem turnieju*/
+  margin-left: 120px;
+  padding-top: 50px;
+}
+.spawnedPhoto img{ /*wlaściwości zdjęcia*/
+  box-shadow: 7px 7px 10px -9px #424242;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}

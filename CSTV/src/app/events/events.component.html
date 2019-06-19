@@ -1,3 +1,32 @@
-<p>
-  events works!
-</p>
+<section class="spawned">
+  <div class="spawnedInfo" *ngIf="selectedEvent"> <!--(tu i dalej)dyrektywa *ngIf pozwala na generowanie potrzebnego elementu według wybranego z listy istniejących-->
+      <h2>{{selectedEvent.name}}</h2> <!--wybieramy nazwe turnieja z wybranego elementu isty-->
+      <hr>
+      <div class="spawnedText">
+        <span>Opis:<br></span>Czas trwania: {{selectedEvent.description}}
+        <span><br></span>1 Miejsce: {{selectedEvent.winner}} - {{selectedEvent.pWinner}}$ <!--(tu i dalej) również wybieramy element z wybranego elementu isty-->
+        <span><br></span>2 Miejsce: {{selectedEvent.scPlace}} - {{selectedEvent.pSecond}}$
+        <span><br></span>3 Miejsce: {{selectedEvent.tdPlace}} - {{selectedEvent.pThird}}$
+      </div>
+      <hr>
+  </div>
+  <div class="spawnedPhoto" *ngIf="selectedEvent">
+      <img src="{{selectedEvent.photoOfEvent}}" />
+  </div>
+</section>
+
+<section class="all">
+  <h2>TURNIEJE</h2>
+  <div class="eventElements">
+      <ul class="events">
+          <li *ngFor="let event of events" [class.selected]="event === selectedEvent" 
+              (click)="onSelect(event)"> <!--dyrektywa *ngFor tworzy liste lementów z istniejącego array elementów turnieju-->
+              <span class="badge">{{event.name}}</span>
+              <span class="badge">{{event.description}}</span>
+              <span class="badge">{{event.quantityOfTeams}} Teams</span>
+              <span class="badge">Prize {{event.prPool}}$</span>
+              <span class="badge">{{event.type | uppercase }}</span>
+          </li>
+      </ul>
+  </div>
+</section>
