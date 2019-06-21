@@ -1,3 +1,35 @@
-<p>
-  top-players works!
-</p>
+<section class="spawned">
+  <div class="spawnedInfo" *ngIf="selectedPlayer"> <!--(tu i dalej)dyrektywa *ngIf pozwala na generowanie potrzebnego elementu według wybranego z listy istniejących-->
+      <h2>{{selectedPlayer.nickName | uppercase}}</h2> <!--wybieramy nazwe nowosci z wybranego elementu isty-->
+      <hr>
+      <div class="spawnedText1">
+        <span>Imie: </span>{{selectedPlayer.name}}<br>
+        <span>Wiek: </span>{{selectedPlayer.age}} <br>
+        <span>Państwo: </span>{{selectedPlayer.country}}<br>
+        <span>Drużyna: </span>{{selectedPlayer.team}}<br>
+      </div>
+      <div class="spawnedText2">
+        <span>Ocena: </span>{{selectedPlayer.rating}}<br>
+        <span>Zabójstw na rundę: </span>{{selectedPlayer.kpr}} <br>
+        <span>Strzały w głowę: </span>{{selectedPlayer.hs}}%<br>
+        <span>Damage na rundę: </span>{{selectedPlayer.dpr}}<br>
+      </div>
+      <hr>
+  </div>
+  <div class="spawnedPhoto" *ngIf="selectedPlayer">
+      <img src="{{selectedPlayer.photoOfPlayer}}" />
+  </div>
+</section>
+
+<section class="all">
+  <h2>RANKING TOP GRACZY ZA 2018 ROK</h2>
+  <div class="playersElements">
+      <ul class="players">
+          <li *ngFor="let player of players" [class.selected]="player === selectedPlayer" 
+              (click)="onSelect(player)"> <!--dyrektywa *ngFor tworzy liste z istniejących elementów array -->
+              <span class="badge">#{{player.place }}</span>
+              <span class="badge">{{player.nickName }}</span>
+          </li>
+      </ul>
+  </div>
+</section>
