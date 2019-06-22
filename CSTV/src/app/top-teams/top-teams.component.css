@@ -1,0 +1,80 @@
+.selected { /*efekt dla aktywnego elementu listy*/
+    background-color: #90caf9 !important;
+  }
+  .teams { /*wlaściwości bloku listy*/
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+    width: 50em;
+    text-align: center;
+  }
+  .teams li { /*wlaściwości elementów listy*/
+    cursor: pointer;
+    position: relative;
+    background-color: #42a5f5;
+    margin: auto;
+    margin-bottom: 3px;
+    padding: .3em 0;
+    width: 700px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
+  }
+  .teams .text {
+    position: relative;
+    top: -3px;
+  }
+  .teams .badge {
+    display: inline-block;
+    font-size: medium;
+    color: white;
+    padding: 0.5em 0.7em 0 0.7em;
+    position: relative;
+    height: 1.8em;
+    border-radius: 4px;
+  }
+  .all h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #424242;
+    font-weight: 600;
+  }
+  .all{ /*lokalizacja sekcji która zawiera w sobie inne bloki z listą elementów*/
+    padding-bottom: 35px;
+  }
+  .all p{
+      text-align: center;
+  }
+  .spawned{ /*lokalizacja sekcji która zawiera w sobie wypływającą informacje o wybranej drużynie*/
+    padding-bottom: 25px;
+  }
+  .spawned h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 180px;
+    color: #424242;
+    font-weight: 600;
+  }
+  .spawnedInfo{ /*rozmiar oraz lokaizacja bloku z informacją o drużynie*/
+    float: right;
+    width: 600px;
+    margin-right: 80px;
+  }
+  .spawnedText{ /*wlaściwosći bloków z informacją o drużynie*/
+    margin-left: 50px;
+    padding: 10px 0px 13px 0px;
+    text-align: justify;
+  }
+  .spawnedInfo span{
+    font-weight: bold;
+  }
+  .spawnedPhoto{ /* lokalizacja bloku ze zdjęciem drużyny*/
+    margin-left: 100px;
+    padding-top: 20px;
+  }
+  .spawnedPhoto img{ /*wlaściwości zdjęcia*/
+    box-shadow: 7px 7px 10px -9px #424242;
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+  }

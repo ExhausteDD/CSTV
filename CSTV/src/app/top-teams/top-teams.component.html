@@ -1,3 +1,31 @@
-<p>
-  top-teams works!
-</p>
+<section class="spawned">
+  <div class="spawnedInfo" *ngIf="selectedTeam"> <!--(tu i dalej)dyrektywa *ngIf pozwala na generowanie potrzebnego elementu według wybranego z listy istniejących-->
+      <h2>{{selectedTeam.name | uppercase}}</h2> <!--wybieramy nazwe drużyny z wybranego elementu isty-->
+      <hr>
+      <div class="spawnedText">
+        <span>Drużyna: </span>{{selectedTeam.name}}<br>
+        <span>Punkty: </span>{{selectedTeam.points}} <br>
+        <span>Państwo: </span>{{selectedTeam.country}}<br>
+        <span>Graczy: </span>{{selectedTeam.players}}<br>
+        <span>Tugoniów w top15: </span>{{selectedTeam.wTop}}
+      </div>
+      <hr>
+  </div>
+  <div class="spawnedPhoto" *ngIf="selectedTeam">
+      <img src="{{selectedTeam.photoOfTeam}}" />
+  </div>
+</section>
+
+<section class="all">
+  <h2>OBECNY RANKING TOP DRUŻYN</h2>
+  <div class="TeamsElements">
+      <ul class="teams">
+          <li *ngFor="let team of teams" [class.selected]="team === selectedTeam" 
+              (click)="onSelect(team)"> <!--dyrektywa *ngFor tworzy liste z istniejących elementów array -->
+              <span class="badge">#{{team.place }}</span>
+              <span class="badge">{{team.name }}</span>
+          </li>
+      </ul>
+  </div>
+</section>
+

@@ -2,7 +2,7 @@ import { Events } from './events';
 
 export const EVENTS: Events[] = [ // stworzony array z informacją niezbędną dla korzystania z danej strony, zawiera informacje o turniejach
 // tslint:disable-next-line: max-line-length // (tu i dalej) specjalna komenda pozwaliająca na przekroczenie długości linii kodu
-    {name: 'ESL Pro League Season 9 Odense 2019', description: 'Jun 18th - Jun 23rd 2019', quantityOfTeams: 16, winner: 'lorem', scPlace: 'lorem', tdPlace: 'lorem', type: 'lan', prPool: 600000, pWinner: 250000, pSecond: 80000, pThird: 40000, photoOfEvent: 'assets/events/eventESL9.png'},
+    {name: 'ESL Pro League Season 9 Odense 2019', description: 'Jun 18th - Jun 22nd 2019', quantityOfTeams: 16, winner: 'Liquid', scPlace: 'G2', tdPlace: 'NRG', type: 'lan', prPool: 600000, pWinner: 250000, pSecond: 80000, pThird: 40000, photoOfEvent: 'assets/events/eventESL9.png'},
 // tslint:disable-next-line: max-line-length
     {name: 'DreamHack Open Summer Rio 2019', description: 'Jun 15th - Jun 17th 2019', quantityOfTeams: 8, winner: 'OpTic', scPlace: 'Ancient', tdPlace: 'Tricker', type: 'lan',  prPool: 100000, pWinner: 50000, pSecond: 20000, pThird: 10000, photoOfEvent: 'assets/events/eventDH2019.png'},
 // tslint:disable-next-line: max-line-length

@@ -1,0 +1,16 @@
+section{ /*rozmiar sekcji z tekstem*/
+    width: 700px;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+h2{ /*wlaściwości zagłówka*/
+    text-align: center;
+    color: #424242;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+p{ /*wlaściwości tekstu*/
+    text-align: justify;
+    padding: 10px 0px 13px 0px;
+}
